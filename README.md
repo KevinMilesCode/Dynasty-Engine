@@ -22,11 +22,15 @@ Latest release (app + mod): see [Releases](../../releases).
 |---|---|
 | Report something broken | [New bug report](../../issues/new?template=bug_report.yml) |
 | Suggest something | [New feature request](../../issues/new?template=feature_request.yml) |
-| Ask a question | [Discussions → Q&A](../../discussions/categories/q-a) — answered questions get folded into the [wiki](../../wiki) FAQ by hand |
-| Read docs / FAQ | [Wiki](../../wiki) |
+| Ask a question | [Discussions → Q&A](../../discussions/categories/q-a) — answered questions get folded into the wiki FAQ by hand |
+| Read docs / FAQ | [`wiki/` folder](../../tree/main/wiki) — see note below |
 
 ## Status
 
 Private for now — public release timing is still being decided. Everything
 above already works the same whether the repo is private (for
-collaborators) or public.
+collaborators) or public, **except the Wiki tab**: GitHub only offers Wikis
+on private repos with a paid plan, so until this repo goes public (or moves
+to a paid plan), the [`wiki/`](../../tree/main/wiki) folder itself is the
+docs — same content, `wiki-sync.yml` just can't publish it to a real Wiki
+page yet.

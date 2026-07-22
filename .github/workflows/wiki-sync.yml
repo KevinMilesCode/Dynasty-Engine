@@ -23,7 +23,20 @@ jobs:
         with:
           path: main
 
+      - name: Check Wiki feature is enabled
+        id: wiki_enabled
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          HAS_WIKI=$(gh api repos/${{ github.repository }} --jq '.has_wiki')
+          echo "has_wiki=$HAS_WIKI" >> "$GITHUB_OUTPUT"
+          if [ "$HAS_WIKI" != "true" ]; then
+            echo "::notice::Wiki feature is off for this repo (paid-plan gate on private repos, or just not toggled on yet). Skipping sync — wiki/*.md in this repo is the source of truth in the meantime, see wiki/Home.md."
+          fi
+
       - name: Checkout (or initialize) wiki repo
+        if: steps.wiki_enabled.outputs.has_wiki == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -43,11 +56,13 @@ jobs:
           fi
 
       - name: Mirror wiki/ pages into the wiki repo
+        if: steps.wiki_enabled.outputs.has_wiki == 'true'
         run: |
           set -e
           rsync -av --delete --exclude='.git' main/wiki/ wiki-repo/
 
       - name: Commit and push if changed
+        if: steps.wiki_enabled.outputs.has_wiki == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

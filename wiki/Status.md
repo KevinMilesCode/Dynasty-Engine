@@ -1,5 +1,8 @@
 # Current Status
 
+> Reading this on GitHub's Code tab instead of a Wiki tab? That's expected —
+> see the note on [Home](Home.md) for why.
+
 _Snapshot as of 2026-07-22. This page is updated by hand, occasionally, while
 the project is in early preview — it isn't tied to specific releases yet.
 Once there's a first real v0.1, wiki updates will start tracking what
