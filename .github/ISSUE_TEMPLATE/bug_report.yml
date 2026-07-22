@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         Have a question instead of a bug? Please use [Discussions → Q&A](../../discussions/categories/q-a)
-        instead — it keeps the FAQ/wiki accurate and keeps this tracker for actionable bugs.
+        instead — it keeps this tracker for actionable bugs.
   - type: textarea
     id: what-happened
     attributes:
