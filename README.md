@@ -418,3 +418,124 @@ rather than through Issues/Discussions.
 Private for now. Public release timing is still being decided. Everything
 above already works the same whether the repo is private (for
 collaborators) or public.
+
+---
+
+## Screens
+
+Every screen in the app, captured from a real dynasty save mid-bowl-season.
+These are live screenshots, not mockups: the numbers, names, and rosters are
+what the tool actually produced from that save. Remember the honesty note
+above, though. Some of what's pictured is finished, some is half-wired, and a
+screen existing doesn't mean the system behind it is complete.
+
+### Pulse — the weekly decision inbox
+
+The landing screen: what needs a decision this week, and a running wire of
+everything that moved.
+
+![Pulse](docs/screenshots/pulse.png)
+
+### Prospects — the recruit pool
+
+The full pool from your save, read in letter-grade bands rather than raw
+ratings.
+
+![Prospects](docs/screenshots/prospects.png)
+
+Opening any prospect gives you his card: projected playing time at your
+program, an estimated NIL range (a range, never a quote), per-stat grade
+bands graded against others at his position, and where his recruitment
+actually stands.
+
+![Prospect card](docs/screenshots/prospect-card.png)
+
+### Board — Priority / Target / Watch
+
+Where you sort the pool into tiers, which is what actually spends your
+staff's attention.
+
+![Board](docs/screenshots/board.png)
+
+### Scouting — the beat network
+
+Assign staff beats to a position group in a region and let them file reports
+over time.
+
+![Scouting](docs/screenshots/scouting.png)
+
+### Offers — what the sheets you cut actually bought
+
+![Offers](docs/screenshots/offers.png)
+
+### Transfer Portal
+
+![Portal](docs/screenshots/portal.png)
+
+### Budget — the NIL ledger
+
+One annual pool covering the roster book, recruit deals, and retention
+raises, with your true headroom and what's at risk in open offers. The
+forward view projects what next year's book looks like once graduating
+seniors and likely early NFL declarations come off it.
+
+![Budget](docs/screenshots/budget.png)
+
+### Roster
+
+![Roster](docs/screenshots/roster.png)
+
+Rostered players are people you'd genuinely know the truth about, so their
+cards show real ratings and real NIL, unlike a recruit's bands.
+
+![Roster player card](docs/screenshots/roster-player-card.png)
+
+### Training Results
+
+*(Placeholder — the progression engine behind this screen is still being
+designed.)*
+
+![Training Results](docs/screenshots/training-results.png)
+
+### Coach Legacy
+
+Your career scored on one lifetime number and plotted directly against real
+historical coaching legends and every coach in your save.
+
+![Coach Legacy](docs/screenshots/coach-legacy.png)
+
+### Coach Trust
+
+![Coach Trust](docs/screenshots/coach-trust.png)
+
+### Coaching Carousel
+
+The league-wide job market. **Edit board** is where you set openings,
+candidate ranks, and interest:
+
+![Carousel — edit board](docs/screenshots/carousel-edit-board.png)
+
+**Your standing** is where your own coach sits in the market:
+
+![Carousel — your standing](docs/screenshots/carousel-your-standing.png)
+
+**Chain / who takes what** projects the whole cascade: each team's leading
+candidate takes the job he most prefers, which frees the others and lets the
+next candidate step up.
+
+![Carousel — chain](docs/screenshots/carousel-chain.png)
+
+**Next week** simulates the following week's hiring round:
+
+![Carousel — next week](docs/screenshots/carousel-next-week.png)
+
+### Vault — paired checkpoints
+
+Roll the entire world (save + the tool's own memory) back to a saved moment,
+always as a matched pair.
+
+![Vault](docs/screenshots/vault.png)
+
+### Options
+
+![Options](docs/screenshots/options.png)
