@@ -117,6 +117,34 @@ generally, you never see the literal lean number, only qualitative signals
 number would turn recruiting into spreadsheet-gaming instead of a read on a
 relationship.
 
+### An invisible hand keeps the CPU honest
+
+Rival interest runs its own quiet simulation underneath everything above:
+offers land, interest surges, official visits happen, and recruits soft- and
+hard-commit on their own schedule over the course of a season, the same way
+a real recruiting cycle breathes rather than resolving in one shot at
+Signing Day. That's most of what you're actually reading on the Pulse wire.
+
+Sitting on top of that is a self-correcting layer that keeps a long dynasty's
+CPU league from looking robotic. If a small program is inexplicably hoarding
+blue-chip signees year after year, the market cools on them; if a genuine
+blue blood is whiffing on recruits at its own level, interest heats back up
+for it. It's the same corrector watching every program, not a thumb on the
+scale for or against you specifically.
+
+If your own class is stacking unusually far above what your program's
+actual level would support, the tool doesn't take a recruit away from you or
+block anything. It just makes the fight a little more honest: a rival's
+interest in your best remaining target heats up, or your shakiest soft
+commit starts fielding harder questions about why he picked you. Nothing
+already locked in gets reversed, and no real lead you've built ever gets
+erased by dice. It only ever adds pressure to a race that already exists,
+never invents one out of nothing.
+
+*(A quieter cleanup pass, the kind that force-places stragglers and
+rebalances lopsided CPU classes at the end of a cycle, is designed but not
+built yet.)*
+
 ### Promises, grievances, and a coach's credibility
 
 Recruiting isn't only money. Every promise you make (to a recruit, to a
@@ -216,12 +244,20 @@ stable personality (ambitious vs. content, loyal vs. mercenary, risk-taking
 vs. safe, program-builder vs. maintainer), so the carousel is predictable in
 character but surprising in outcome. An Alabama coach almost never leaves,
 a hot young Group-of-5 coach bolts the moment a Power job calls, and you can
-generally read who's a flight risk without it feeling scripted. You can
-maintain your own blacklist of jobs/coaches you'd never accept or hire, and
-the league enforces its own natural no-go pairings too. Your own coach is
-the one truly live agent in the simulation: a great season at a mediocre
-program spikes your market value and can trigger real offers, but a bad one
-can put you on the hot seat and get you fired for real.
+generally read who's a flight risk without it feeling scripted. Your own
+coach is the one truly live agent in the simulation: a great season at a
+mediocre program spikes your market value and can trigger real offers, but
+a bad one can put you on the hot seat and get you fired for real.
+
+You also hold a **blacklist** the carousel enforces every time it recomputes:
+pick a coach/team pairing and decide whether the team will never make the
+offer, the coach will never take it, or neither happens at all, and whether
+that holds permanently or only while the coach keeps his current job (a
+rivalry grudge that lifts the moment he's actually fired, versus a burned
+bridge that never does). It ships pre-loaded with a handful of real-world
+contentious-exit pairings; delete any you disagree with and they stay gone.
+The league enforces its own natural no-go pairings on top of whatever you
+add.
 
 **Coach perks**, rebuilt from scratch to matter under this mod, since the
 game's own talent trees are built around in-game recruiting/scouting actions
