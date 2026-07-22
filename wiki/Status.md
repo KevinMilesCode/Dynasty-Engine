@@ -8,39 +8,8 @@ the project is in early preview — it isn't tied to specific releases yet.
 Once there's a first real v0.1, wiki updates will start tracking what
 changed release by release._
 
-## What Dynasty Engine is
-
-An external front-office / GM tool for a CFB27 dynasty. It drives
-recruiting, the transfer portal, and NIL **outside** the game — a companion
-mod blocks in-game recruiting hours so this tool is the only way to scout,
-offer, and sign. Everything else about CFB27 (playing games, prospect
-generation, on-field simulation) stays exactly as the base game does it.
-
-## What works today
-
-The current build covers the recruiting core end to end:
-
-- **Prospects** — browse the full high school / JUCO / portal pool from your
-  real save: stars, letter-grade scouting reads, recruitment interest, an
-  estimated NIL range, and a detail view for every player.
-- **Board** — a tiered priority list (Priority / Target / Watch) over your
-  staff's attention, with a visit-influence "warmth" read per prospect.
-- **Scouting** — spend staff effort narrowing scouting reads and turning up
-  sleepers.
-- **Pulse** — a decision inbox surfacing rival offers, visit windows, and
-  commit pressure as they happen, plus a running feed of the week's
-  recruiting movement.
-- **Budget** — the team's NIL pool weighed against roster contracts,
-  committed recruit deals, and at-risk offers.
-- **Portal** — a full simulated transfer-portal window: entrants, CPU
-  bidding, day-by-day decisions, and writing the resulting roster moves back
-  to your save.
-- **Roster** — the projected depth chart, including incoming/outgoing portal
-  moves and where each player originally came from (HS / JUCO / portal).
-- **Coach Legacy** — a career scoreboard for your coach, benchmarked against
-  historic greats.
-- **Vault** — automatic checkpoints before anything writes to your save, with
-  one-click restore.
+For what Dynasty Engine is and its full feature set, see [About](About.md) —
+this page only tracks what's currently in progress or not built yet.
 
 ## What's in progress
 
