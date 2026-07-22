@@ -37,13 +37,21 @@ Latest release (app + mod): see [Releases](../../releases).
   in-game systems this tool replaces: it zeroes out the weekly hours coaches
   spend on in-game recruiting/scouting, so the AI's old click-to-recruit loop
   simply has nothing to spend, and it blocks player-initiated transfers, so
-  the portal only moves players the way this tool decides. It also retunes
-  recruit generation itself: the game's own recruiting-class generator still
-  produces every prospect, but the mod reshapes the star-rating spread it
-  hands out — more realistic 4★/5★ counts, no more scrubby 1★ recruits, and
-  a small floor so a handful of states the game almost never recruits from
-  actually show up occasionally. Games and on-field sim are untouched,
-  vanilla CFB27.
+  the portal only moves players the way this tool decides.
+- **It also retunes recruit generation itself, down to the archetype.** The
+  game's own recruiting-class generator still produces every prospect — this
+  isn't a separate generator bolted on — but the mod reshapes the star
+  ratings it hands out, and it doesn't just flatten that by position. A true
+  deep-threat receiver or a shutdown corner gets a real shot at 4★/5★; an
+  elite tackle prospect is restored to the 5★ prominence real recruiting
+  gives offensive linemen; a pure run-blocking receiver or fullback
+  essentially never is one — because that's how actual recruiting rankings
+  work, not a flat blue-chip rate shared by every archetype at a position.
+  Overall the class comes out with more realistic 4★/5★ counts, no more
+  scrubby 1★ recruits (folded into a stronger 2★ tier instead), and a small
+  floor so a handful of states the game almost never recruits from actually
+  show up occasionally. Games and on-field sim are untouched, vanilla
+  CFB27.
 - **In-game NIL gets zeroed out, on purpose.** Every player's raw in-game
   NIL value and NIL-related flags get cleared to nothing, so there's no
   stray number on a player's in-game card that could make you think the
