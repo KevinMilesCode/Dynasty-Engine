@@ -223,6 +223,29 @@ the one truly live agent in the simulation: a great season at a mediocre
 program spikes your market value and can trigger real offers, but a bad one
 can put you on the hot seat and get you fired for real.
 
+**Coach perks**, rebuilt from scratch to matter under this mod, since the
+game's own talent trees are built around in-game recruiting/scouting actions
+this tool turns off. Three new trees ride the native talent-tree slots the
+mod frees up (renamed in-game so what you're buying reads correctly), each
+tied to a currency this tool actually spends: relationship influence,
+staff attention, NIL negotiation leverage, and portal intel. Every CPU coach
+in the league draws from the same trees under the same rules, so the AI's
+staffs get real, felt advantages too, not a static number only your program
+benefits from.
+
+The standout mechanic is the **hunch**: the one sanctioned piece of
+development-trait information anywhere in the tool. A hunch is a staff
+suspicion, never a fact, that a player might (or might notably might not)
+turn into more than his ratings suggest. It's probabilistic, deliberately
+capped to stay rare, and can simply be wrong with no warning. Perk
+investment makes hunches fire more often and trust them more, but never
+turns one into certainty. It's meant to feel like a scout's gut, not a
+hidden stat revealed early.
+
+Kicker/punter perks, draft-stock perks, "players are just more likely to
+stay" perks, and dealbreaker perks are all cut on principle. If it isn't a
+lever one of this tool's real systems reads, it doesn't make the cut.
+
 ### Data Safety: the Vault
 
 Your dynasty is really two linked files: the game save itself, and Dynasty
