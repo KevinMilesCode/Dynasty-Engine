@@ -22,7 +22,7 @@ Latest release (app + mod): see [Releases](../../releases).
 |---|---|
 | Report something broken | [New bug report](../../issues/new?template=bug_report.yml) |
 | Suggest something | [New feature request](../../issues/new?template=feature_request.yml) |
-| Ask a question | [Discussions → Q&A](../../discussions/categories/q-a) — answered questions automatically become [wiki](../../wiki) FAQ entries |
+| Ask a question | [Discussions → Q&A](../../discussions/categories/q-a) — answered questions get folded into the [wiki](../../wiki) FAQ by hand |
 | Read docs / FAQ | [Wiki](../../wiki) |
 
 ## Status

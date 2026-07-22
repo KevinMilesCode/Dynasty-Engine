@@ -9,13 +9,13 @@ against `wiki/*.md` here; once merged, it's mirrored here automatically.
 
 ## Pages
 
-- [FAQ](FAQ) — common questions, most of them generated automatically from
-  answered [Discussions](../../discussions/categories/q-a)
+- [FAQ](FAQ) — common questions, curated by hand from answered
+  [Discussions](../../discussions/categories/q-a)
 
 ## Getting help
 
 - **Bug?** [Open an issue](../../issues/new?template=bug_report.yml)
 - **Feature idea?** [Open an issue](../../issues/new?template=feature_request.yml)
 - **Question?** [Ask in Discussions → Q&A](../../discussions/categories/q-a) —
-  once your question is marked answered, it's automatically drafted into the
-  [FAQ](FAQ) page for the next person who has it.
+  answered questions get folded into the [FAQ](FAQ) manually (see
+  `MAINTAINING.md`), not by an automated bot.
