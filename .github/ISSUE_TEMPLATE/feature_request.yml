@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         Have a question instead of a suggestion? Please use [Discussions → Q&A](../../discussions/categories/q-a)
-        instead — it keeps this tracker for actionable requests.
+        instead; it keeps this tracker for actionable requests.
   - type: textarea
     id: problem
     attributes:
