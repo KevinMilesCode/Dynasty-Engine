@@ -22,9 +22,8 @@ Latest release (app + mod): see [Releases](../../releases).
 |---|---|
 | Report something broken | [New bug report](../../issues/new?template=bug_report.yml) |
 | Suggest something | [New feature request](../../issues/new?template=feature_request.yml) |
-| Ask a question | [Discussions → Q&A](../../discussions/categories/q-a) — answered questions get folded into the wiki FAQ by hand |
-| Learn what it is / does | [`wiki/About.md`](../../tree/main/wiki/About.md) |
-| Read docs / FAQ | [`wiki/` folder](../../tree/main/wiki) — see note below |
+| Ask a question | [Discussions → Q&A](../../discussions/categories/q-a) — answered questions get folded into the wiki by hand once there's enough to warrant it |
+| Learn what it is / does, current status | [`wiki/Home.md`](../../tree/main/wiki/Home.md) |
 
 ## Status
 
@@ -32,6 +31,6 @@ Private for now — public release timing is still being decided. Everything
 above already works the same whether the repo is private (for
 collaborators) or public, **except the Wiki tab**: GitHub only offers Wikis
 on private repos with a paid plan, so until this repo goes public (or moves
-to a paid plan), the [`wiki/`](../../tree/main/wiki) folder itself is the
+to a paid plan), [`wiki/Home.md`](../../tree/main/wiki/Home.md) itself is the
 docs — same content, `wiki-sync.yml` just can't publish it to a real Wiki
 page yet.
