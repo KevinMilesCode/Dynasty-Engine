@@ -34,9 +34,18 @@ Latest release (app + mod): see [Releases](../../releases).
 ## How it works
 
 - **The mod** installs through MMC like any other CFB27 mod and disables the
-  in-game systems this tool replaces (recruiting hours, player-initiated
-  transfers). Everything else about the game (games, on-field sim, prospect
-  generation) is untouched, vanilla CFB27.
+  in-game systems this tool replaces: it zeroes out the weekly hours coaches
+  spend on in-game recruiting/scouting, so the AI's old click-to-recruit loop
+  simply has nothing to spend, and it blocks player-initiated transfers, so
+  the portal only moves players the way this tool decides. Everything else
+  about the game (games, on-field sim, prospect generation) is untouched,
+  vanilla CFB27.
+- **In-game NIL is left alone, and that's deliberate.** The mod doesn't
+  disable or zero it; CFB27's own NIL points still exist in the save exactly
+  as vanilla generates them. Dynasty Engine simply never reads them as an
+  input and never writes to them. Every NIL number you see, and every
+  recruiting/retention/portal decision it drives, comes entirely from this
+  tool's own dollar-based system running independently alongside the game's.
 - **The app** opens your real save file, parses it, and layers a persistent
   memory on top (a small local database per dynasty) for everything the save
   itself doesn't track: where a player actually came from, a coach's career
