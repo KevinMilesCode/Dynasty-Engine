@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question
+    url: https://github.com/KevinMilesCode/Dynasty-Engine/discussions/categories/q-a
+    about: Questions get answered here, not in Issues — accepted answers automatically feed the FAQ/wiki.
+  - name: Wiki / FAQ
+    url: https://github.com/KevinMilesCode/Dynasty-Engine/wiki
+    about: Check the wiki first — your question may already be answered.

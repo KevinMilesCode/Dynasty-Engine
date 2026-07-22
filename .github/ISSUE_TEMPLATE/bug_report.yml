@@ -1,0 +1,54 @@
+name: Bug report
+description: Something in the app or mod isn't working as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question instead of a bug? Please use [Discussions → Q&A](../../discussions/categories/q-a)
+        instead — it keeps the FAQ/wiki accurate and keeps this tracker for actionable bugs.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you see instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The exact steps that trigger it, from launching the app or loading the save.
+      placeholder: |
+        1. Open dynasty '...'
+        2. Go to screen '...'
+        3. Click '...'
+        4. See error
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App / mod version
+      description: The version shown in the app, and the .fbmod version if relevant.
+    validations:
+      required: true
+  - type: dropdown
+    id: mod-active
+    attributes:
+      label: Was the Dynasty Engine mod active in-game when this happened?
+      options:
+        - "Yes"
+        - "No"
+        - "Not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      description: Drag and drop screenshots, console output, or log files here.
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
