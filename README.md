@@ -40,12 +40,14 @@ Latest release (app + mod): see [Releases](../../releases).
   the portal only moves players the way this tool decides. Everything else
   about the game (games, on-field sim, prospect generation) is untouched,
   vanilla CFB27.
-- **In-game NIL is left alone, and that's deliberate.** The mod doesn't
-  disable or zero it; CFB27's own NIL points still exist in the save exactly
-  as vanilla generates them. Dynasty Engine simply never reads them as an
-  input and never writes to them. Every NIL number you see, and every
+- **In-game NIL gets zeroed out, on purpose.** Every player's raw in-game
+  NIL value and NIL-related flags get cleared to nothing, so there's no
+  stray number on a player's in-game card that could make you think the
+  game's own systems are handling NIL, or that you need to do anything
+  with them yourself. Every NIL number you actually see, and every
   recruiting/retention/portal decision it drives, comes entirely from this
-  tool's own dollar-based system running independently alongside the game's.
+  tool's own dollar-based system, run independently of whatever the game
+  itself still has on the books.
 - **The app** opens your real save file, parses it, and layers a persistent
   memory on top (a small local database per dynasty) for everything the save
   itself doesn't track: where a player actually came from, a coach's career
