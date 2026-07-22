@@ -23,6 +23,7 @@ Latest release (app + mod): see [Releases](../../releases).
 | Report something broken | [New bug report](../../issues/new?template=bug_report.yml) |
 | Suggest something | [New feature request](../../issues/new?template=feature_request.yml) |
 | Ask a question | [Discussions → Q&A](../../discussions/categories/q-a) — answered questions get folded into the wiki FAQ by hand |
+| Learn what it is / does | [`wiki/About.md`](../../tree/main/wiki/About.md) |
 | Read docs / FAQ | [`wiki/` folder](../../tree/main/wiki) — see note below |
 
 ## Status

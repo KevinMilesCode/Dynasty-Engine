@@ -20,8 +20,10 @@ mirrored there automatically.
 
 ## Pages
 
-- [Status.md](Status.md) — what the app currently does, what's in progress,
-  what isn't built yet
+- [About.md](About.md) — what Dynasty Engine is, why it exists, how it
+  works, features, and the longer-term vision
+- [Status.md](Status.md) — what's actually built right now vs. still in
+  progress (a snapshot, updated by hand)
 - [FAQ.md](FAQ.md) — common questions, curated by hand from answered
   [Discussions](https://github.com/KevinMilesCode/Dynasty-Engine/discussions/categories/q-a)
 
