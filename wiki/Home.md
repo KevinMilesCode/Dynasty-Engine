@@ -9,6 +9,8 @@ against `wiki/*.md` here; once merged, it's mirrored here automatically.
 
 ## Pages
 
+- [Status](Status) — what the app currently does, what's in progress, what
+  isn't built yet
 - [FAQ](FAQ) — common questions, curated by hand from answered
   [Discussions](../../discussions/categories/q-a)
 
