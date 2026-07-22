@@ -355,6 +355,34 @@ Each phase builds on the last; recruiting has to be solid before coaching
 carousel realism matters, and both need to exist before program-wide
 intelligence is worth building on top of them.
 
+### Possible direction: player progression
+
+Right now the Training Results screen is an honest placeholder: a season's
+worth of player growth isn't modeled yet. The system under active design
+works something like this: instead of aging every player by a fixed
+formula, each player at every position is measured against where real
+recruits and rostered players from actual base-game rosters land, position
+by position, class year by class year. A player's growth each season is
+really a move up or down that real-world scale, driven by his development
+trait, the strength of his coaching staff, and how much he's actually
+played, with some year-to-year randomness on top.
+
+The point of building it this way is that the league's overall talent shape
+holds up over a long dynasty, the way a real conference does, instead of
+quietly drifting flatter (or wildly overinflated) after 20 simulated
+seasons. A program with genuinely good player development doesn't
+manufacture new talent out of nowhere; it wins a bigger share of a talent
+pool that stays the same size league-wide, closer to how real recruiting
+and development plays out relative to rivals. Physical tools (speed,
+strength) mostly stay put once a player arrives on campus; what actually
+improves year to year is largely the mental/technical side of the game
+(awareness, recognition, technique).
+
+This is proposed, not decided or built. If it ships, it also has to hold
+deliberate room open at the top of the ratings scale for players who would,
+in reality, have already left early for the NFL, so the pool doesn't get
+quietly capped by the players who are no longer in it.
+
 ### Possible direction: real-world roster economics
 
 College football's actual rules are moving toward something the game doesn't
