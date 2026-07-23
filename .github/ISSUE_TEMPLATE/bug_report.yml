@@ -44,6 +44,19 @@ body:
     validations:
       required: true
   - type: textarea
+    id: other-mods
+    attributes:
+      label: Other mods or tools touching this dynasty
+      description: >-
+        List any other CFB27 mods (Frosty/FTC) or external tools/editors that touch this save or
+        dynasty at all, besides Dynasty Engine — including anything used to generate, edit, or
+        convert the save. If none, write "None".
+      placeholder: |
+        e.g. None
+        e.g. MMC Editor, some-other-fbmod, a save editor
+    validations:
+      required: true
+  - type: textarea
     id: logs
     attributes:
       label: Logs / screenshots
