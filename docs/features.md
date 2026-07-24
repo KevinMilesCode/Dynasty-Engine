@@ -24,7 +24,7 @@ that's deliberate: the uncertainty represents projection, not incomplete
 scouting. Even the tightest band is still an evaluation, never "the truth."
 Only actual rostered or portal players ever show a real overall rating.
 
-**Board** is where you sort recruits into Priority / Target / Watch tiers,
+**Board** is where you sort recruits into Priority / Target / Interest tiers,
 which controls how your staff's attention gets spent and how much
 relationship-building influence a recruit accrues. Rival interest is shown
 only as a qualitative "warmth" read, never a number or a progress bar,
@@ -232,6 +232,10 @@ staff attention, NIL negotiation leverage, and portal intel. Every CPU coach
 in the league draws from the same trees under the same rules, so the AI's
 staffs get real, felt advantages too, not a static number only your program
 benefits from.
+
+*(Three trees are rebuilt and confirmed working in-game. The game's remaining
+native trees are still mostly untouched, so a handful of their perks read
+correctly but currently do nothing in a live dynasty.)*
 
 The standout mechanic is the **hunch**: the one sanctioned piece of
 development-trait information anywhere in the tool. A hunch is a staff
