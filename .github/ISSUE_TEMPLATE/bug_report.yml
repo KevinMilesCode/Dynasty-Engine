@@ -13,9 +13,9 @@ body:
         Have a question instead of a bug? Please use [Discussions → Q&A](../../discussions/categories/q-a)
         instead; it keeps this tracker for actionable bugs.
 
-        Version 0.098 is barely alpha. Known-broken items are already listed in
-        [Install → Known limitations](../../blob/main/docs/install.md#known-limitations-in-0098);
-        no need to file those.
+        Version 0.098 is barely alpha. Check a system's status inline in
+        [Features](../../blob/main/docs/features.md) before filing; already-known
+        issues are noted there.
   - type: textarea
     id: what-happened
     attributes:

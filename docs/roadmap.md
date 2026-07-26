@@ -5,19 +5,24 @@
 
 Nothing on this page is a delivery date. The current build (0.098) is barely
 alpha, and the whole point of releasing it is to get feedback before the tuning
-and refinement work starts. The two "possible direction" sections at the bottom
-are exactly the kind of thing worth arguing about now: use **Request Feature**
-in the app, or [Discussions](../../../discussions).
+and refinement work starts. The "possible direction" section at the bottom is
+exactly the kind of thing worth arguing about now: use **Request Feature** in
+the app, or [Discussions](../../../discussions).
 
 Dynasty Engine is being built in phases, roughly by system:
 
 1. **Recruiting core (current focus):** scouting, the board, offers,
    commitments, the transfer portal, NIL, and the read-only data (awards,
    stats, prior-season results) the portal's own logic depends on.
-2. **Coaches:** the full coaching carousel described in
-   [Features](features.md#coaching), a career ledger, staff management, and
-   reworking the in-game coach talent trees so their perks actually do
-   something meaningful through the tool.
+2. **Coaches:** most of this has moved ahead of schedule. The
+   [coaching carousel](features.md#coaching) is built, including the hiring
+   model, your own standing in the market, the cascade projection, and the
+   career ledger; what's left there is generating vacancies ourselves (who
+   gets fired and who retires is still the game's call) and validating the
+   write in-game. The rework of the in-game coach talent trees, so their
+   perks actually do something meaningful through the tool, is built too: it
+   became the six-axis Staff Grades system, and what remains there is
+   calibration. Staff management beyond the head coach is still ahead.
 3. **Program intelligence:** an Almanac (champions, awards, draft history),
    Insights (recruiting hit-rate and development analytics), and
    simulated-world events (injuries, suspensions, booster swings, alumni
@@ -29,33 +34,20 @@ Each phase builds on the last; recruiting has to be solid before coaching
 carousel realism matters, and both need to exist before program-wide
 intelligence is worth building on top of them.
 
-## Possible direction: player progression
+## Built since this page last said otherwise: player progression
 
-Right now the Training Results screen is an honest placeholder: a season's
-worth of player growth isn't modeled yet. The system under active design
-works something like this: instead of aging every player by a fixed
-formula, each player at every position is measured against where real
-recruits and rostered players from actual base-game rosters land, position
-by position, class year by class year. A player's growth each season is
-really a move up or down that real-world scale, driven by his development
-trait, the strength of his coaching staff, and how much he's actually
-played, with some year-to-year randomness on top.
+Player progression used to be listed here as a possible direction. It is
+now decided, built, and shipping in 0.098, so it has moved to
+[Features](features.md#player-development-how-a-roster-actually-grows).
+Short version: growth is relative to a measured baseline of the real base
+roster, position by position and class year by class year, driven mostly by
+development trait, then by the quality of the staff and program, then by
+luck. It is not calibrated yet, which is exactly the sort of thing feedback
+helps with.
 
-The point of building it this way is that the league's overall talent shape
-holds up over a long dynasty, the way a real conference does, instead of
-quietly drifting flatter (or wildly overinflated) after 20 simulated
-seasons. A program with genuinely good player development doesn't
-manufacture new talent out of nowhere; it wins a bigger share of a talent
-pool that stays the same size league-wide, closer to how real recruiting
-and development plays out relative to rivals. Physical tools (speed,
-strength) mostly stay put once a player arrives on campus; what actually
-improves year to year is largely the mental/technical side of the game
-(awareness, recognition, technique).
-
-This is proposed, not decided or built. If it ships, it also has to hold
-deliberate room open at the top of the ratings scale for players who would,
-in reality, have already left early for the NFL, so the pool doesn't get
-quietly capped by the players who are no longer in it.
+Two pieces of it are still open: deliberate headroom at the very top of the
+ratings scale for players who would in reality have left early for the NFL,
+and players whose archetype naturally shifts as they develop.
 
 ## Possible direction: real-world roster economics
 

@@ -14,7 +14,6 @@
 - [3. First run](#3-first-run)
 - [Try it without the game](#try-it-without-the-game)
 - [The weekly loop](#the-weekly-loop)
-- [Known limitations in 0.098](#known-limitations-in-0098)
 - [Uninstalling](#uninstalling)
 
 ## What you need
@@ -102,39 +101,6 @@ in CFB27 → come back next week.**
 
 The app never writes to your save on its own. Every write is explicit,
 previewable, and checkpointed first.
-
-## Known limitations in 0.098
-
-These are known and reported here on purpose. You do not need to file them.
-
-- **The full season loop is not playable end to end.** Individual systems work
-  against a real save; a complete season through the tool does not.
-- **Nothing is balance-tuned.** NIL prices, commit probabilities, portal
-  behavior, and generation targets are first-pass values.
-- **No data migration promise.** The tool's per-dynasty database may not be
-  readable by a future build.
-- **Player progression is not modeled.** The Training Results screen is an
-  honest placeholder. The design is in the
-  [Roadmap](roadmap.md#possible-direction-player-progression).
-- **In-game player XP is suppressed but not fully dead.** The mod zeroes the
-  levers found so far and the app clears XP at load, and a small amount still
-  trickles through in-game. Being worked on.
-- **Recruit generation is shipping and measured, still being tuned.** A few
-  edge-rusher archetypes currently overshoot their star target, and the tuning
-  has not been proven out across many simulated seasons.
-- **Some coach perks read correctly but do nothing.** Three talent trees are
-  rebuilt and working; the game's remaining native trees are mostly untouched.
-- **Promise grading is partial.** The "I am not going anywhere" promise verifies
-  itself when you take another job; playing-time and NIL promises currently sit
-  open on the ledger instead of being auto-graded.
-- **CPU firings and retirements are not fully surfaced** in the carousel yet.
-- **The end-of-cycle cleanup pass** that force-places stragglers and rebalances
-  lopsided CPU classes is designed, not built.
-- **Multi-user and online dynasties are untested.** Everything measured so far
-  has been single-user offline dynasties.
-
-Where each individual system stands is marked inline in
-[Features](features.md).
 
 ## Uninstalling
 

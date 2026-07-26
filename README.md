@@ -23,8 +23,9 @@ this release exists.
 
 What that means concretely:
 
-- **Systems are brittle; the full season can easily break as I'm rapdily making changes.** 
-  Do not expect to play a real dynasty as it may very well break along the way.
+- **Systems are brittle, and the full season can easily break while I am making
+  changes this rapidly.** Do not expect to play a real dynasty. It may very well
+  break along the way.
 - **Numbers are untuned.** NIL prices, commit odds, portal behavior, and
   generation targets are all first-pass values, not balanced ones.
 - **Data can break between versions.** The tool keeps its own per-dynasty
@@ -39,22 +40,31 @@ what is wrong. Not to invest 15 seasons in it.
 
 ---
 
+## AI use
+
+I write the vision docs, the requirements, and the test cases myself, then lean
+heavily on AI coding to build from them. There is no way I could write all of
+this code on my own.
+
+---
+
 ## Quick links
 
 | Go here | For |
 |---|---|
-| [Install and first run](docs/install.md) | Requirements, the app, the mod, the demo save, known limitations |
+| [Install and first run](docs/install.md) | Requirements, the app, the mod, the demo save |
 | [The weekly loop](#how-you-actually-use-it-the-weekly-loop) | How the tool is meant to be used, and what it replaces in-game |
 | [Demo save](docs/install.md#try-it-without-the-game) | Open a real dynasty in the tool without launching CFB27 |
-| [Walkthrough video](#walkthrough-video) | A guided tour of every screen |
-| [Screens](docs/screens.md) | Screenshot of every screen in the app |
+| [Walkthrough video](#walkthrough-video) | A guided tour of the app |
+| [Screens](docs/screens.md) | Screenshots of most screens in the app (old, due for a refresh) |
 | [Features](docs/features.md) | What each system does, with what is built and what is not marked inline |
-| [Roadmap](docs/roadmap.md) | Phase plan, plus two directions still under consideration |
+| [Roadmap](docs/roadmap.md) | Phase plan, plus a direction still under consideration |
 | [Releases](../../releases) | Downloads: installer, `.fbmod`, demo save |
 | [Report a bug](../../issues/new?template=bug_report.yml) | Prefer the in-app **Report Bug** button, it attaches diagnostics for you |
 | [Ask a question](../../discussions/new?category=q-a) | Prefer the in-app **Ask Question** button |
 | [Request a feature](../../issues/new?template=feature_request.yml) | Prefer the in-app **Request Feature** button |
 | [Usage terms](LICENSE.md) | What you may and may not do with the build |
+| [AI use](#ai-use) | How this gets built |
 
 ---
 
@@ -98,8 +108,9 @@ windows close, and recruits commit elsewhere without you having had a say.
 
 What the tool now owns instead of the game: all recruiting and scouting, all
 scholarship offers, all NIL (in real dollars, the game's own NIL numbers are
-zeroed on purpose), who enters the transfer portal and where they land, and
-coaching-carousel moves. What the game still owns: everything on the field,
+zeroed on purpose), who enters the transfer portal and where they land,
+coaching-carousel moves, and player development between seasons. What the game
+still owns: everything on the field,
 plus the roster and results the tool reads back out of your save.
 
 ## How it works, briefly
@@ -114,9 +125,9 @@ retunes recruit generation down to the archetype: the game's own generator still
 produces every prospect, but the mod reshapes the star ratings it hands out so
 position value looks like real recruiting, with more realistic 4-star and 5-star
 counts and no 1-star filler. It also renames and repurposes three coach talent
-trees so what you are buying reads correctly, and suppresses in-game player XP
-so progression is not being decided in two places at once. Games and on-field
-simulation are untouched vanilla CFB27.
+trees so what you are buying reads correctly, and suppresses in-game player XP,
+because player progression is the app's job now and it should not be decided in
+two places at once. Games and on-field simulation are untouched vanilla CFB27.
 
 **The app** does everything else: it parses your save, layers a persistent
 per-dynasty memory on top for what the save does not track, turns off
@@ -131,8 +142,9 @@ first and checkpointed automatically.
 Prospects and the recruiting board, a real scouting network, commitment
 decisions that weigh six factors per recruit, a self-correcting CPU league, a
 promise ledger tied to your coach's credibility, a fully simulated transfer
-portal, a real-dollar NIL budget, the coaching carousel and career legacy, and
-the Vault's paired checkpoints.
+portal, a real-dollar NIL budget, the coaching carousel and career legacy,
+league-wide staff report cards, an annual player-development pass anchored to
+the real base roster, and the Vault's paired checkpoints.
 
 Each of those is marked in [Features](docs/features.md) with where it actually
 stands. If something is not marked, ask.
@@ -157,11 +169,11 @@ stands. If something is not marked, ask.
 
 ## Walkthrough video
 
-A guided tour of every screen, recorded against a real save.
+A guided tour of the app, recorded against a real save.
 
 <!-- PASTE THE YOUTUBE LINK HERE, then delete this comment line. -->
-*Link coming shortly. Until it lands, [Screens](docs/screens.md) has a
-screenshot and a description of every screen in the app.*
+*Link coming shortly. Until it lands, [Screens](docs/screens.md) has
+screenshots and a description of most screens in the app.*
 
 ## Feedback
 
@@ -178,9 +190,12 @@ If you cannot get the app open at all, file it here directly:
 
 ## About this repo
 
-This is the public side of the project: releases, docs, and the wiki. The app's
-source lives in a separate private repo. This one exists so anyone can get the
-tool and find answers without needing access to the source.
+This is the public side of the project: downloads, docs, issues, and
+discussions. All the documentation lives as markdown in
+[docs/](docs/), versioned with the release it describes, so you can always read
+the docs as they were for the build you are running. The app's source lives in a
+separate private repo. This one exists so anyone can get the tool and find
+answers without needing access to the source.
 
 Usage terms are in [LICENSE.md](LICENSE.md). Not affiliated with, endorsed by,
 or associated with Electronic Arts.

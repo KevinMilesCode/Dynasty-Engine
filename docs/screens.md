@@ -2,19 +2,21 @@
 
 ← Back to [README](../README.md)
 
-Every screen in the app, captured from a real dynasty save mid-bowl-season.
+Most screens in the app, captured from a real dynasty save mid-bowl-season.
 These are live screenshots, not mockups: the numbers, names, and rosters are
 what the tool actually produced from that save.
 
-> **These screenshots are from an older build than 0.098.** Layout, styling, and
-> some numbers have moved since. They are accurate about what each screen is
-> for, not about exactly how it looks today. The walkthrough video and the demo
-> save are the current picture.
+> **These screenshots are old and due for a refresh, and they don't cover every
+> screen in the app.** Layout, styling, and some numbers have moved since they
+> were taken, and a few screens have no screenshot here yet. They are accurate
+> about what each screen is for, not about exactly how it looks today or a
+> complete list of what exists. The walkthrough video and the demo save are the
+> current picture.
 
 The app is barely alpha. Some of what's pictured is finished, some is
 half-wired, and a screen existing doesn't mean the system behind it is
-complete. [Features](features.md) marks where each system actually stands, and
-[Install](install.md#known-limitations-in-0098) lists what is known broken.
+complete. [Features](features.md) marks where each system actually stands and
+what is known broken.
 
 **Rather see it live?** The release includes a
 [demo save](install.md#try-it-without-the-game) you can open in the app without
@@ -43,6 +45,11 @@ A guided tour of these screens in the running app.
 - [Coaching Carousel](#coaching-carousel)
 - [Vault](#vault)
 - [Options](#options)
+- [Screens with no screenshot here yet](#screens-with-no-screenshot-here-yet)
+
+**Not pictured yet** (they exist in the app, they just have no screenshot on
+this page): the Departures Desk, Staff Grades, Promises, Getting Started, and
+Discipline. [Features](features.md) describes what each of them does.
 
 ## Pulse
 
@@ -111,8 +118,15 @@ cards show real ratings and real NIL, unlike a recruit's bands.
 
 ## Training Results
 
-*(Placeholder. The progression engine behind this screen is still being
-designed.)*
+Where you run the annual player-development pass and read what it did: who
+broke out, who stalled, what each position group looks like now, and a check
+that the league still looks like a real football roster. Every season is
+archived and browsable by year.
+
+*(This screenshot predates the real progression engine and shows the old
+placeholder version of the screen. The system behind it is
+[built and shipping in 0.098](features.md#player-development-how-a-roster-actually-grows);
+the screen no longer looks like this.)*
 
 ![Training Results](screenshots/training-results.png)
 
@@ -158,3 +172,22 @@ to a saved moment, always as a matched pair.
 ## Options
 
 ![Options](screenshots/options.png)
+
+## Screens with no screenshot here yet
+
+These exist in the app and are reachable from the sidebar. They came after this
+screenshot set was taken, so there is nothing to show here yet. The walkthrough
+video covers them.
+
+- **Getting Started**, the one-time setup gate and the acknowledgements. It stays
+  reachable afterward so the "how a week works" instructions can be re-read.
+- **Departures Desk**, the end-of-season screen for everyone leaving: graduating
+  seniors, early NFL declarations, and portal entrants. It computes a full
+  preview, and its write is deliberately disabled pending a feasibility test.
+- **Staff Grades**, the six-axis league-wide report card for every staff in your
+  save. See
+  [Features](features.md#coaching).
+- **Promise ledger**, every promise you and the CPU have made, and how each one
+  was graded.
+- **Discipline**, an empty placeholder for a Phase 3 system. The nav slot exists
+  ahead of the design work; there is no engine behind it.
