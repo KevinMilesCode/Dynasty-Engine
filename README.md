@@ -171,9 +171,11 @@ stands. If something is not marked, ask.
 
 A guided tour of the app, recorded against a real save.
 
-<!-- PASTE THE YOUTUBE LINK HERE, then delete this comment line. -->
-*Link coming shortly. Until it lands, [Screens](docs/screens.md) has
-screenshots and a description of most screens in the app.*
+**→ [Watch the walkthrough](https://youtu.be/AO2ES16mfKM)**
+
+It is the best way to see what the tool actually is before you install anything.
+[Screens](docs/screens.md) has still screenshots of most screens too, though
+they are older than the video.
 
 ## Feedback
 

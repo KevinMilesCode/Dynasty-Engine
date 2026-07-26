@@ -26,8 +26,10 @@ installing the mod or launching CFB27.
 
 A guided tour of these screens in the running app.
 
-<!-- PASTE THE YOUTUBE LINK HERE, then delete this comment line. -->
-*Link coming shortly.*
+**→ [Watch the walkthrough](https://youtu.be/AO2ES16mfKM)**
+
+The video is newer than the screenshots below, so where the two disagree, the
+video is right.
 
 ## Contents
 
