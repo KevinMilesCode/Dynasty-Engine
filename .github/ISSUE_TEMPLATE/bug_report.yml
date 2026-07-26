@@ -5,8 +5,17 @@ body:
   - type: markdown
     attributes:
       value: |
+        **If the app opens, use its Community → Report Bug button instead of this form.**
+        It collects diagnostics (and optionally your save and dynasty database) into a folder
+        and then opens this same form so you can attach them. A report with that bundle is
+        worth several without one.
+
         Have a question instead of a bug? Please use [Discussions → Q&A](../../discussions/categories/q-a)
         instead; it keeps this tracker for actionable bugs.
+
+        Version 0.098 is barely alpha. Known-broken items are already listed in
+        [Install → Known limitations](../../blob/main/docs/install.md#known-limitations-in-0098);
+        no need to file those.
   - type: textarea
     id: what-happened
     attributes:
@@ -49,7 +58,7 @@ body:
       label: Other mods or tools touching this dynasty
       description: >-
         List any other CFB27 mods (Frosty/FTC) or external tools/editors that touch this save or
-        dynasty at all, besides Dynasty Engine — including anything used to generate, edit, or
+        dynasty at all, besides Dynasty Engine, including anything used to generate, edit, or
         convert the save. If none, write "None".
       placeholder: |
         e.g. None

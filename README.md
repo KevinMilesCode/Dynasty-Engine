@@ -1,108 +1,132 @@
 # Dynasty Engine
 
 An external front-office / GM tool for a CFB27 dynasty. It runs alongside the
-game as its own app and takes over recruiting, the transfer portal, coaching
-moves, and NIL (the front-office side of running a program), while CFB27
-itself keeps doing what it does best: playing and simulating games.
+game as its own Windows app and takes over recruiting, the transfer portal,
+coaching moves, and NIL, while CFB27 keeps doing what it does best: playing and
+simulating games.
 
 The app opens your real dynasty save, reads it directly, and writes decisions
-back into it when you commit them. There's no separate universe to keep in
+back into it when you commit them. There is no separate universe to keep in
 sync, and no re-entering your roster or your class by hand.
 
-**Why it exists:** CFB27's on-field game is deep, but the front-office layer
-around it (who you recruit, how the portal shakes out, what NIL actually buys,
-how a coaching career plays out over a decade) is thin and mostly invisible.
-There's no real memory across seasons: where did this player actually come
-from, what has this coach actually built? And the recruiting and portal
-systems the game does have don't hold up to sustained, GM-level attention.
-Dynasty Engine is that missing layer.
+---
 
-## Status: early preview
+## Read this before you download anything
 
-**The app is not end-to-end functional yet.** Individual systems work against
-a real save (opening a dynasty, reading the prospect pool, running a portal
-window, scoring a coaching career), but you cannot play a full season through
-the tool start to finish. Read everything on this page as a description of
-what's being built and how it's meant to work, not a feature list you can go
-use today. Some of it is finished, some is half-wired, and some is design that
-hasn't been built at all.
+**This is barely alpha. Do not start a real dynasty in this tool yet.**
 
-Where a specific system stands is called out inline in
-[Features](docs/features.md) rather than tracked in a status list here, so it
-can't quietly go stale. If something isn't marked, ask.
+I would normally keep a build in this state private. I am sharing it because I
+have spent a long stretch building it with nobody looking at it, and I do not
+yet have enough people involved to get the feedback I need before committing to
+serious tuning, refinement, and testing. That feedback is the entire reason
+this release exists.
 
-I'm sharing it unfinished on purpose. I spent a long stretch building this in
-the dark with nobody looking at it, and ideas from people who actually play
-dynasty are worth far more early than late. If something here sounds wrong, or
-there's an obvious thing missing, that's exactly what I want to hear.
+What that means concretely:
 
-## Get it
+- **Systems work in isolation; the full season loop does not.** You cannot play
+  a season start to finish through the tool.
+- **Numbers are untuned.** NIL prices, commit odds, portal behavior, and
+  generation targets are all first-pass values, not balanced ones.
+- **Data can break between versions.** The tool keeps its own per-dynasty
+  database alongside your save, and its shape is still changing. Migrations
+  exist, but at this stage I will discard that data rather than carry a bad
+  structure forward, which has already happened once.
+- **Treat every dynasty you open with it as disposable.** Back up your save
+  yourself before you point the app at it.
 
-**There's no public build yet.** The first release will land here, on the
-[Releases](../../releases) page, and it'll bundle both halves: the app
-installer and the companion mod.
+The right way to use version 0.098 is to look around, break things, and tell me
+what is wrong. Not to invest 15 seasons in it.
 
-When it does, you'll need:
+---
 
-- **Windows (64-bit).** The app ships as a standard installer. It isn't code
-  signed yet, so Windows will show an "unrecognized publisher" warning the
-  first time (More info → Run anyway).
-- **CFB27**, and a Frosty-based mod manager (MMC). The `.fbmod` goes in the
-  mod manager's `Mods\CollegeFB27\` folder and gets enabled there like any
-  other CFB27 mod.
-- **An existing dynasty save.** The app reads your own save; it doesn't
-  generate a world of its own.
+## Quick links
 
-Until then, the place to talk about it is Discord (see
-[Talk to me](#talk-to-me)).
+| Go here | For |
+|---|---|
+| [Install and first run](docs/install.md) | Requirements, the app, the mod, the demo save, known limitations |
+| [The weekly loop](#how-you-actually-use-it-the-weekly-loop) | How the tool is meant to be used, and what it replaces in-game |
+| [Demo save](docs/install.md#try-it-without-the-game) | Open a real dynasty in the tool without launching CFB27 |
+| [Walkthrough video](#walkthrough-video) | A guided tour of every screen |
+| [Screens](docs/screens.md) | Screenshot of every screen in the app |
+| [Features](docs/features.md) | What each system does, with what is built and what is not marked inline |
+| [Roadmap](docs/roadmap.md) | Phase plan, plus two directions still under consideration |
+| [Releases](../../releases) | Downloads: installer, `.fbmod`, demo save |
+| [Report a bug](../../issues/new?template=bug_report.yml) | Prefer the in-app **Report Bug** button, it attaches diagnostics for you |
+| [Ask a question](../../discussions/new?category=q-a) | Prefer the in-app **Ask Question** button |
+| [Request a feature](../../issues/new?template=feature_request.yml) | Prefer the in-app **Request Feature** button |
+| [Usage terms](LICENSE.md) | What you may and may not do with the build |
 
-## How it works
+---
 
-**The mod** is small and does one job: it turns off the in-game systems this
-tool replaces, and reshapes the prospects the game generates.
+## Why it exists
 
-- **It zeroes the weekly hours** coaches spend on in-game recruiting and
-  scouting, so the game's own click-to-recruit loop has nothing left to spend
-  and recruiting only happens through the app.
-- **It retunes recruit generation itself, down to the archetype.** The game's
-  own generator still produces every prospect (this isn't a separate generator
-  bolted on), but the mod reshapes the star ratings it hands out, and not
-  flatly by position. A true deep-threat receiver or a shutdown corner gets a
-  real shot at 4★/5★; an elite tackle prospect is restored to the 5★
-  prominence real recruiting gives offensive linemen; a pure run-blocking
-  receiver or fullback essentially never is one, because that's how actual
-  recruiting rankings work. The class also comes out with more realistic
-  4★/5★ counts, no more scrubby 1★ recruits (folded into a stronger 2★ tier
-  instead), and a small floor so a handful of states the game almost never
-  recruits from actually show up. This one is shipping and measured against
-  real saves, but it's still being actively tuned: a few edge-rusher
-  archetypes currently overshoot their target, and it hasn't been proven out
-  across many simulated seasons yet.
+CFB27's on-field game is deep, but the front-office layer around it (who you
+recruit, how the portal shakes out, what NIL actually buys, how a coaching
+career plays out over a decade) is thin and mostly invisible. There is no real
+memory across seasons: where did this player actually come from, what has this
+coach actually built? And the recruiting and portal systems the game does have
+do not hold up to sustained, GM-level attention. Dynasty Engine is that missing
+layer.
 
-Games and on-field simulation are untouched, vanilla CFB27.
+## How you actually use it: the weekly loop
 
-**The app** does everything else.
+Dynasty Engine is not a companion dashboard you glance at. **It is meant to be
+opened at the start of every single week of your dynasty**, and it replaces a
+large amount of what you would otherwise be doing inside CFB27.
 
-- **It opens your real save**, parses it, and layers a persistent memory on
-  top (a small local database per dynasty) for everything the save itself
-  doesn't track: where a player actually came from, a coach's career history,
-  your program's ledgers. The save stays the canonical source for game data;
-  the app never invents a parallel copy of it.
-- **It switches off player-initiated transfers** by writing the game's own
-  transfer settings to zero in your save, so the portal only ever moves
-  players the way this tool decides.
-- **It zeroes in-game NIL, on purpose.** Every player's raw in-game NIL value
-  and NIL flags get cleared, so there's no stray number on a player's in-game
-  card implying the game's systems are handling NIL or that you need to do
-  something with them. Every NIL number you actually see, and every decision
-  it drives, comes from this tool's own dollar-based system.
-- **Nothing changes in your save silently.** Every action that touches the
-  save (signing a recruit, moving a transfer, a coach hire) is explicit,
-  previewable before it happens, and automatically checkpointed (both the save
-  and the app's own memory), so any decision can be undone by restoring the
-  checkpoint.
+The loop, in order, every week:
 
-## What's in it
+1. **Open Dynasty Engine and load your save.** Pulse, the landing screen, is
+   the week brief: what needs a decision from you this week, plus a wire of
+   everything that moved since last time.
+2. **Do the front-office work here.** Scouting beats, sorting the board,
+   cutting NIL offers, making and grading promises, working the portal during
+   its window, retention, coaching moves. None of it happens in the game
+   anymore.
+3. **Commit, then close the app.** Every decision that touches the save is
+   explicit and previewable, and the app checkpoints both halves (your save and
+   its own database) before writing. The app never writes to your save on its
+   own while you are away.
+4. **Go back to CFB27, play or sim the week, and save in-game.**
+5. **Come back to Dynasty Engine for the next week.**
+
+Both directions of that loop matter. The app is the only place recruiting
+happens, because the mod zeroes the game's recruiting and scouting hours. And
+the game is the only place football happens, because Dynasty Engine does not
+simulate games at all. If you skip weeks in the tool, offers expire, visit
+windows close, and recruits commit elsewhere without you having had a say.
+
+What the tool now owns instead of the game: all recruiting and scouting, all
+scholarship offers, all NIL (in real dollars, the game's own NIL numbers are
+zeroed on purpose), who enters the transfer portal and where they land, and
+coaching-carousel moves. What the game still owns: everything on the field,
+plus the roster and results the tool reads back out of your save.
+
+## How it works, briefly
+
+Dynasty Engine is two halves, and you need both.
+
+**The mod** (`Dynasty-Engine-v0.098.fbmod`) is small, and everything it does is
+about getting the game's own systems out of the way. It zeroes the weekly hours
+coaches spend on in-game recruiting and scouting, so the game's click-to-recruit
+loop has nothing left to spend and recruiting only happens through the app. It
+retunes recruit generation down to the archetype: the game's own generator still
+produces every prospect, but the mod reshapes the star ratings it hands out so
+position value looks like real recruiting, with more realistic 4-star and 5-star
+counts and no 1-star filler. It also renames and repurposes three coach talent
+trees so what you are buying reads correctly, and suppresses in-game player XP
+so progression is not being decided in two places at once. Games and on-field
+simulation are untouched vanilla CFB27.
+
+**The app** does everything else: it parses your save, layers a persistent
+per-dynasty memory on top for what the save does not track, turns off
+player-initiated transfers, clears in-game NIL so no stray number implies the
+game is handling it, and writes every decision back explicitly, previewable
+first and checkpointed automatically.
+
+**→ [Full detail in Features](docs/features.md)**
+
+## What is in it
 
 Prospects and the recruiting board, a real scouting network, commitment
 decisions that weigh six factors per recruit, a self-correcting CPU league, a
@@ -110,74 +134,53 @@ promise ledger tied to your coach's credibility, a fully simulated transfer
 portal, a real-dollar NIL budget, the coaching carousel and career legacy, and
 the Vault's paired checkpoints.
 
-**→ [Features](docs/features.md)**, with what's built and what isn't marked
-per system.
+Each of those is marked in [Features](docs/features.md) with where it actually
+stands. If something is not marked, ask.
 
 ## Design principles
 
 - **You see what a GM would actually know.** Recruits are graded in bands and
   qualitative reads, never a raw hidden number pretending to be certainty.
-  Rostered and portal players, who you'd genuinely know the truth about, show
-  real numbers.
+  Rostered and portal players, who you would genuinely know the truth about,
+  show real numbers.
 - **Real dollars, not an invented currency.** NIL is priced in actual dollars
   against a real budget, because program wealth is a real-world fact the game
-  itself doesn't model.
+  itself does not model.
 - **Consequences are real.** Declined offers, broken promises, and lost
   recruiting battles stay lost. The Vault protects against bugs and mistakes,
   not against the outcomes of your own decisions.
-- **Your save is never at risk.** Every write is backed up first, previewable
-  before it happens, and reversible after.
-- **The tool has memory the game doesn't.** Player origin, coach career
+- **Your save is never at risk from the tool.** Every write is backed up first,
+  previewable before it happens, and reversible after.
+- **The tool has memory the game does not.** Player origin, coach career
   history, program ledgers: all things a real front office would track and the
   base game simply forgets.
 
-## Where it's going
+## Walkthrough video
 
-Built in phases: recruiting core (current focus), then coaches, then program
-intelligence, then facilities and equipment. There's also a bigger direction
-under consideration, modeling real-world salary caps and transfer limits
-instead of today's system.
+A guided tour of every screen, recorded against a real save.
 
-**→ [Roadmap](docs/roadmap.md)**
+<!-- PASTE THE YOUTUBE LINK HERE, then delete this comment line. -->
+*Link coming shortly. Until it lands, [Screens](docs/screens.md) has a
+screenshot and a description of every screen in the app.*
 
-## Screens
+## Feedback
 
-Live screenshots from a real dynasty save, not mockups. A screen existing
-doesn't mean the system behind it is complete; see the status note above.
+**Use the buttons in the app.** The left sidebar has a Community section with
+**Ask Question**, **Report Bug**, and **Request Feature**. Report Bug is the
+important one: it bundles diagnostics (and optionally your save and dynasty
+database) into a folder, then opens the issue form so you can attach them. A
+bug report with that bundle is worth several without it.
 
-**Pulse**, the weekly decision inbox: what needs a decision this week, and a
-running wire of everything that moved.
-
-![Pulse](docs/screenshots/pulse.png)
-
-**A prospect's card**: projected playing time at your program, an estimated
-NIL range (a range, never a quote), per-stat grade bands graded against others
-at his position, and where his recruitment actually stands.
-
-![Prospect card](docs/screenshots/prospect-card.png)
-
-**Budget**, the NIL ledger: one annual pool covering the roster book, recruit
-deals, and retention raises, with your true headroom and what's at risk in
-open offers.
-
-![Budget](docs/screenshots/budget.png)
-
-**→ [All screens](docs/screens.md)**, every screen in the app.
-
-## Talk to me
-
-Until the first official release, **Discord** is the place: bug reports,
-questions, ideas, and arguments about whether any of this is a good idea. If
-you found your way to this repo, you already know where to find it.
-
-Issues and Discussions are open here too, but Discord is where the
-conversation actually is for now.
+If you cannot get the app open at all, file it here directly:
+[bug](../../issues/new?template=bug_report.yml) ·
+[question](../../discussions/new?category=q-a) ·
+[feature](../../issues/new?template=feature_request.yml)
 
 ## About this repo
 
-This is the public side of the project: releases, docs, and the wiki. The
-app's source lives in a separate private repo. This one exists so anyone can
-get the tool and find answers without needing access to the source.
+This is the public side of the project: releases, docs, and the wiki. The app's
+source lives in a separate private repo. This one exists so anyone can get the
+tool and find answers without needing access to the source.
 
 Usage terms are in [LICENSE.md](LICENSE.md). Not affiliated with, endorsed by,
 or associated with Electronic Arts.

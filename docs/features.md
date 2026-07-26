@@ -1,6 +1,23 @@
 # Features
 
-← Back to [README](../README.md)
+← Back to [README](../README.md) · [Install](install.md) ·
+[Screens](screens.md) · [Roadmap](roadmap.md)
+
+This is the depth page: what each system does and why it works that way. Status
+notes are inline, in italics, next to the system they apply to, so they cannot
+quietly go stale in a separate list. A short summary of what is known broken in
+0.098 is in [Install](install.md#known-limitations-in-0098).
+
+> **Barely alpha. Do not start a real dynasty in this tool yet.** Read the
+> warning at the top of the
+> [README](../README.md#read-this-before-you-download-anything). Descriptions
+> below cover intent and mechanics; almost none of the numbers behind them are
+> balance-tuned.
+
+Everything here assumes [the weekly
+loop](../README.md#how-you-actually-use-it-the-weekly-loop): you open the tool
+at the start of each week, and it owns the front office while the game owns the
+football.
 
 ## Contents
 

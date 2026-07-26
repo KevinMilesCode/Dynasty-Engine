@@ -1,6 +1,13 @@
 # Roadmap
 
-← Back to [README](../README.md)
+← Back to [README](../README.md) · [Features](features.md) ·
+[Install](install.md)
+
+Nothing on this page is a delivery date. The current build (0.098) is barely
+alpha, and the whole point of releasing it is to get feedback before the tuning
+and refinement work starts. The two "possible direction" sections at the bottom
+are exactly the kind of thing worth arguing about now: use **Request Feature**
+in the app, or [Discussions](../../../discussions).
 
 Dynasty Engine is being built in phases, roughly by system:
 

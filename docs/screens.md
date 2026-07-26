@@ -6,9 +6,26 @@ Every screen in the app, captured from a real dynasty save mid-bowl-season.
 These are live screenshots, not mockups: the numbers, names, and rosters are
 what the tool actually produced from that save.
 
-The app is an early preview. Some of what's pictured is finished, some is
+> **These screenshots are from an older build than 0.098.** Layout, styling, and
+> some numbers have moved since. They are accurate about what each screen is
+> for, not about exactly how it looks today. The walkthrough video and the demo
+> save are the current picture.
+
+The app is barely alpha. Some of what's pictured is finished, some is
 half-wired, and a screen existing doesn't mean the system behind it is
-complete. [Features](features.md) marks where each system actually stands.
+complete. [Features](features.md) marks where each system actually stands, and
+[Install](install.md#known-limitations-in-0098) lists what is known broken.
+
+**Rather see it live?** The release includes a
+[demo save](install.md#try-it-without-the-game) you can open in the app without
+installing the mod or launching CFB27.
+
+## Walkthrough video
+
+A guided tour of these screens in the running app.
+
+<!-- PASTE THE YOUTUBE LINK HERE, then delete this comment line. -->
+*Link coming shortly.*
 
 ## Contents
 
@@ -29,8 +46,10 @@ complete. [Features](features.md) marks where each system actually stands.
 
 ## Pulse
 
-The weekly decision inbox, and the app's landing screen: what needs a decision
-this week, and a running wire of everything that moved.
+The weekly decision inbox, and the app's landing screen. This is where you start
+every week: what needs a decision from you, and a running wire of everything
+that moved since you were last here. See
+[the weekly loop](../README.md#how-you-actually-use-it-the-weekly-loop).
 
 ![Pulse](screenshots/pulse.png)
 
