@@ -23,8 +23,8 @@ this release exists.
 
 What that means concretely:
 
-- **Systems work in isolation; the full season loop does not.** You cannot play
-  a season start to finish through the tool.
+- **Systems are brittle; the full season can easily break as I'm rapdily making changes.** 
+  Do not expect to play a real dynasty as it may very well break along the way.
 - **Numbers are untuned.** NIL prices, commit odds, portal behavior, and
   generation targets are all first-pass values, not balanced ones.
 - **Data can break between versions.** The tool keeps its own per-dynasty
@@ -60,13 +60,13 @@ what is wrong. Not to invest 15 seasons in it.
 
 ## Why it exists
 
-CFB27's on-field game is deep, but the front-office layer around it (who you
-recruit, how the portal shakes out, what NIL actually buys, how a coaching
-career plays out over a decade) is thin and mostly invisible. There is no real
-memory across seasons: where did this player actually come from, what has this
-coach actually built? And the recruiting and portal systems the game does have
-do not hold up to sustained, GM-level attention. Dynasty Engine is that missing
-layer.
+CFB27's on-field game is deep but overall the game is designed to allow using
+multiple teams, having multiple users, and an experience that allows you to 
+just jump around without it breaking. I think a single player focused experience
+that sacrifices some of that flexibility for depth could be very rewarding.
+
+Yes this is a single team project only but is intended to allow you to take
+new jobs within it. Single team focus may change in the future.
 
 ## How you actually use it: the weekly loop
 
